@@ -23,7 +23,7 @@
 把次序直接看成是时间概念，刚开始你会觉得有点怪异，但是这样的做法有个便利的性质：解耦了 时间 和 任一特定的物理时钟（`physical clock`）。
 引入分布式系统后，这会成为一个必不可少的性质。
 
-> **_【译注】_** 分布式系统的 时间、次序、时钟的概念是个最基础根本的问题，详见被引用最多的 _Leslie Lamport_ 的论文 **_Time Clocks and the Ordering of Events in a Distributed System_** （[中文翻译](http://duanple.blog.163.com/blog/static/709717672012920101343237/)）。
+> **_【译注】_** 分布式系统的 时间、次序、时钟的概念是个最基础根本的问题，详见被引用最多的 _Leslie Lamport_ 的论文 **_Time Clocks and the Ordering of Events in a Distributed System_** （[中文翻译](https://www.cnblogs.com/hzmark/p/Time_Clocks_Ordering.html)）。
 >
 > 现在先 **_不要_** 去看，除非读完本文后你还是有很兴趣要探个明白！
 
@@ -137,7 +137,7 @@
 可以认识到日志是更基本的数据结构：日志除了可用来创建原表，也可以用来创建各类衍生表。
 （是的，表可以是非关系型用户用的键值数据存储（`keyed data store`）。）
 
-<img src="images/yin-yang.jpg" width="180" hspace="10px" align="right" >
+<img src="images/yin-yang.jpg" width="20%" hspace="10px" align="right" >
 
 这个过程也是可逆的：如果你对一张表进行更新，你可以记录这些变更，并把所有更新的『变更日志』发布到表的状态信息中。
 这些变更日志正是你所需要的支持准实时的复制。
